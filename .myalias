@@ -1,4 +1,7 @@
+alias karabinercoding="'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'coding' && echo 'Profile: coding'"
+alias karabinerbash="'/Library/Application Support/org.pqrs/Karabiner-Elements/bin/karabiner_cli' --select-profile 'bash' && echo 'profile:bash'"
 alias gdiff='git diff HEAD'
+alias grootcd='echo "cd into git root" &&  cd $(git rev-parse --show-toplevel)'
  alias rezsh='source ~/.zshrc'
  alias c='pbcopy'
  alias p='pbpaste'
