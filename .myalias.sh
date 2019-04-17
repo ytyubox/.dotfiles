@@ -35,3 +35,9 @@ alias g2='git log --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%cr%Creset%
 alias s='clear;git status -s'
 alias g3='git log --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%cr%Creset%<(20,mtrunc)%C(yellow)%d%Creset %C(cyan)%an%Creset %<(50,trunc)%n%n%C(blue)%s%Creset%n%n%w(,16,16)%b"'
 alias g4='git log --graph --pretty="%n %C(bold blue)[state] %C(bold yellow)%D%Creset%n %C(bold blue)[info.] %Cred%h%Creset | %C(cyan)%an%Creset | %Cgreen%cr%Creset%n %C(bold blue)[title] %C(bold white)%s%Creset%n %C(bold blue)%n %w(,10,11)%b"'
+gdformat ()
+{
+	git diff --color=always $1 | showlinenum  show_hunk=0 show_header=0 "color_line_number=1;37;4" #
+}
+compdef _git gdformat=git-diff
+alias showlinenum='~/aliasSource/showlinenum.awk'

@@ -102,5 +102,6 @@ source $ZSH/oh-my-zsh.sh
      prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
    fi
  }
-source ~/.myalias
+source ~/.myalias.sh
+source ~/bin/*
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
