@@ -1,7 +1,7 @@
 # new mac
 
 ```bash
-git clone ssh://fboender@git.electricmonk.nl:dotfiles ./.dotfiles
+git clone https://github.com/ytyubox/.dotfiles.git ./.dotfiles
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 dgit reset --hard
 ```
