@@ -40,4 +40,5 @@ gdformat ()
 	git diff --color=always $1 | showlinenum  show_hunk=0 show_header=0 "color_line_number=1;37;4" #
 }
 compdef _git gdformat=git-diff
-alias showlinenum='~/aliasSource/showlinenum.awk'alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
+alias showlinenum='~/aliasSource/showlinenum.awk'
+alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
