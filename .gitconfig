@@ -1,0 +1,32 @@
+[user]
+	name = Tsungyu Yu
+	email = ytyubox@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[commit]
+	template = /Users/youzongyu/.git-commit-template.txt
+[credential]
+    helper = osxkeychain
+[alias]
+	cv = commit -v
+	cho = checkout
+	br = branch
+[core]
+	excludesfile = /Users/youzongyu/.gitignore_global
+	editor = subl -n -w
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pull]
+	rebase = true
+[mergetool "sublime"]
+	cmd = sublime -w $MERGED
+	trustExitCode = false
+[merge]
+	tool = sublime
