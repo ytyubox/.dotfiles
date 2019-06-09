@@ -16,7 +16,7 @@
 	br = branch
 [core]
 	excludesfile = /Users/youzongyu/.gitignore_global
-	editor = subl -n -w
+	editor = mvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 

@@ -1,3 +1,5 @@
+"-------------GUI setting--------------"
+set guifont=Menlo\ Regular:h15
 "-------------Search-------------------"
 set hlsearch
 set incsearch

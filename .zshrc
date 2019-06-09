@@ -105,3 +105,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.myalias.sh
 #source ~/bin/*
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="$HOME/.fastlane/bin:$PATH"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
+export GITLAB_API_PRIVATE_TOKEN=oxupGUcLC5WsB1z7D37H
+export GITLAB_API_ENDPOINT=https://gitlab.com/api/v4
