@@ -7,3 +7,5 @@ dgit reset --hard
 ```
 Please note that any files that exist in your home directory will be overwritten by the files from your repository if they’re present.
 
+https://github.com/zsh-users/zsh-autosuggestions
+https://github.com/zsh-users/zsh-syntax-highlighting
