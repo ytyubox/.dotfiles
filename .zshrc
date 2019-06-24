@@ -69,7 +69,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-zsh-syntax-highlighting
+# zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,3 +116,4 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export GITLAB_API_PRIVATE_TOKEN=oxupGUcLC5WsB1z7D37H
 export GITLAB_API_ENDPOINT=https://gitlab.com/api/v4
 source /Users/yu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+set -o vi
