@@ -14,3 +14,5 @@ https://www.electricmonk.nl/log/2015/06/22/keep-your-home-dir-in-git-with-a-deta
 https://github.com/zsh-users/zsh-autosuggestions
 
 https://github.com/zsh-users/zsh-syntax-highlighting
+
+https://www.idownloadblog.com/2015/01/14/how-to-enable-key-repeats-on-your-mac/
