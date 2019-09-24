@@ -115,5 +115,5 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM
 export GITLAB_API_PRIVATE_TOKEN=oxupGUcLC5WsB1z7D37H
 export GITLAB_API_ENDPOINT=https://gitlab.com/api/v4
-source /Users/yu/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 set -o vi
