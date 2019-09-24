@@ -16,17 +16,8 @@
 	br = branch
 [core]
 	excludesfile = /Users/youzongyu/.gitignore_global
-	editor = mvim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [pull]
 	rebase = true
-[mergetool "sublime"]
-	cmd = sublime -w $MERGED
-	trustExitCode = false
-[merge]
-	tool = sublime

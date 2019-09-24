@@ -68,7 +68,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
+git
 # zsh-syntax-highlighting
 )
 
@@ -102,12 +102,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
- alias rezsh='source ~/.zshrc'
- prompt_context() {
-   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-     prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-   fi
- }
+alias rezsh='source ~/.zshrc'
+prompt_context() {
+if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+fi
+}
 source ~/.myalias.sh
 #source ~/bin/*
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -117,3 +117,18 @@ export GITLAB_API_PRIVATE_TOKEN=oxupGUcLC5WsB1z7D37H
 export GITLAB_API_ENDPOINT=https://gitlab.com/api/v4
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 set -o vi
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/opt/libressl/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/libressl/lib"
+export CPPFLAGS="-I/usr/local/opt/libressl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/libressl/lib/pkgconfig"
+fpath=(~/.marathon/ShellAutocomplete/zsh $fpath)
+autoload -Uz compinit && compinit -i
