@@ -16,3 +16,7 @@ https://github.com/zsh-users/zsh-autosuggestions
 https://github.com/zsh-users/zsh-syntax-highlighting
 
 https://www.idownloadblog.com/2015/01/14/how-to-enable-key-repeats-on-your-mac/
+
+# new mac setup book
+
+https://sourabhbajaj.com/mac-setup/index.html
