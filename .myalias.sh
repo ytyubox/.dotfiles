@@ -48,3 +48,4 @@ alias mvi=mvim
 alias glc='git diff --name-only --diff-filter=U'
 alias gpp='git pull && git push'
 alias gweb='git config --get remote.origin.url | xargs open'
+alias slint='swiftlint autocorrect'

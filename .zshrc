@@ -109,6 +109,7 @@ prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
 fi
 }
 source ~/.myalias.sh
+dgit status -s
 #source ~/bin/*
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.fastlane/bin:$PATH"
@@ -132,3 +133,4 @@ export CPPFLAGS="-I/usr/local/opt/libressl/include"
 export PKG_CONFIG_PATH="/usr/local/opt/libressl/lib/pkgconfig"
 fpath=(~/.marathon/ShellAutocomplete/zsh $fpath)
 autoload -Uz compinit && compinit -i
+
