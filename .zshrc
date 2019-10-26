@@ -110,6 +110,7 @@ fi
 }
 source ~/.myalias.sh
 dgit status -s
+dgit fetch
 #source ~/bin/*
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$HOME/.fastlane/bin:$PATH"

@@ -1,2 +1,2 @@
 #!/bin/bash
-open -a Terminal "`pwd`"
+open -a iterm "`pwd`"
