@@ -69,6 +69,7 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 git
+swiftpm
 # zsh-syntax-highlighting
 )
 

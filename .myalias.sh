@@ -37,7 +37,7 @@ alias s='clear;git status -s'
 alias g3='git log --graph --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%H %an %ae %ai%cr%Creset%<(20,mtrunc)%C(yellow)%d%Creset %C(cyan)%an%Creset %<(50,trunc)%n%n%C(blue)%s%Creset%n%n%w(,16,16)%b"'
 alias g4='git log --graph --pretty="%n %C(bold blue)[state] %C(bold yellow)%D%Creset%n %C(bold blue)[info.] %Cred%h%Creset | %C(cyan)%an%Creset | %Cgreen%cr%Creset%n %C(bold blue)[title] %C(bold white)%s%Creset%n %C(bold blue)%n %w(,10,11)%b"'
 alias g5='git log --graph --all --pretty="%n %C(bold blue)[state] %C(bold yellow)%D%Creset%n %C(bold blue)[info.] %Cred%h%Creset | %C(cyan)%an%Creset | %Cgreen%cr%Creset%n %C(bold blue)[title] %C(bold white)%s%Creset%n %C(bold blue)%n %w(,10,11)%b"'
-alias g6=' git log --all -M -C --numstat --date=short --pretty=format:"--%h--%ad--%an--%s" --no-renames'
+alias g6=' git log --all -M -C --numstat --pretty=format:"--%h--%ad--%an--%s" --no-renames '
 gdformat ()
 {
 	git diff --color=always $1 | showlinenum  show_hunk=0 show_header=0 "color_line_number=1;37;4" #
@@ -47,6 +47,12 @@ alias showlinenum='~/aliasSource/showlinenum.awk'
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
 alias mvi=mvim
 alias glc='git diff --name-only --diff-filter=U'
-alias gpp='git pull && git push'
+alias gpp='git pull --recurse-submodules && git push'
 alias gweb='git config --get remote.origin.url | xargs open'
 alias slint='swiftlint autocorrect'
+alias swiftb='swift build'
+alias swiftr='swift run'
+alias swiftbr='swift build && swift run'
+alias spiex='swift package init --type executable'
+alias spxed='swift package generate-xcodeproj | xed .'
+alias gls='git pull --recurse-submodules'
