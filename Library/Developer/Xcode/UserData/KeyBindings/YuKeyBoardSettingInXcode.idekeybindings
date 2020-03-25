@@ -34,6 +34,26 @@
 				<key>Alternate</key>
 				<string>NO</string>
 				<key>CommandID</key>
+				<string>IDESourceEditorExtension:com.tid.Alignment-for-Xcode.Alignment,IDESourceEditorExtensionCommand:com.tid.XcodeSourceEditorExtension-Alignment.Alignment.SourceEditorCommand</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Alignment</string>
+				<key>Title</key>
+				<string>Align</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_invokeSourceEditorExtensionCommand:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
 				<string>IDESourceEditorExtension:io.quicktype.quicktype-xcode,IDESourceEditorExtensionCommand:io.quicktype.quicktype-xcode.PasteJSONAsCode</string>
 				<key>Group</key>
 				<string>Editor Menu for Source Code</string>

@@ -16,6 +16,7 @@
 	br = branch
 [core]
 	excludesfile = /Users/youzongyu/.gitignore_global
+	ignoreCase = true
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	trustExitCode = true
