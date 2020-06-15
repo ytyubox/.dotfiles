@@ -53,8 +53,10 @@ alias slint='swiftlint autocorrect'
 alias swiftb='swift build'
 alias swiftr='swift run'
 alias swiftbr='swift build && swift run'
+alias sbr=swiftbr
 alias spiex='swift package init --type executable'
 alias spxed='swift package generate-xcodeproj | xed .'
 alias gls='git pull --recurse-submodules'
 alias spm='swift package'
 alias xed.='xed .'
+
