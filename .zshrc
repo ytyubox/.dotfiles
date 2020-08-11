@@ -14,6 +14,7 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs vi_mode) # <= left prompt 設了 "dir
 POWERLEVEL9K_MODE='nerdfont-complete'
 # command line 右邊想顯示的內容
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -109,6 +110,7 @@ if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
 prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
 fi
 }
+
 source ~/.myalias.sh
 dgit status -s
 dgit fetch
@@ -119,7 +121,6 @@ export PATH="$HOME/.fastlane/bin:$PATH"
 export GITLAB_API_PRIVATE_TOKEN=oxupGUcLC5WsB1z7D37H
 export GITLAB_API_ENDPOINT=https://gitlab.com/api/v4
 source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-set -o vi
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
 export LDFLAGS="-L/usr/local/opt/icu4c/lib"

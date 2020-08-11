@@ -26,4 +26,4 @@
 	default = current
 	followTags = true
 [init]
-	templateDir = /Users/ios.yu/.dotfiles/git/template
+	templateDir = /Users/ios.yu/.config/git/template
