@@ -59,4 +59,6 @@ alias spxed='swift package generate-xcodeproj | xed .'
 alias gls='git pull --recurse-submodules'
 alias spm='swift package'
 alias xed.='xed .'
-
+gcld() {
+  git clone "$1" && cd "$(basename "$1" .git)"
+}
