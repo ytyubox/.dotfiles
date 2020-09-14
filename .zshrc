@@ -137,3 +137,6 @@ export PKG_CONFIG_PATH="/usr/local/opt/libressl/lib/pkgconfig"
 fpath=(~/.marathon/ShellAutocomplete/zsh $fpath)
 autoload -Uz compinit && compinit -i
 
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
+

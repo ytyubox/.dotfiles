@@ -54,6 +54,26 @@
 				<key>Alternate</key>
 				<string>NO</string>
 				<key>CommandID</key>
+				<string>IDESourceEditorExtension:de.pmw.ProtocolExtension.ProtocolXcodeExtension,IDESourceEditorExtensionCommand:de.pmw.ProtocolExtension.ProtocolXcodeExtension.ProtocolSourceEditorCommand</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>Protocol Extension</string>
+				<key>Title</key>
+				<string>Create Protocol From Element</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_invokeSourceEditorExtensionCommand:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
 				<string>IDESourceEditorExtension:io.quicktype.quicktype-xcode,IDESourceEditorExtensionCommand:io.quicktype.quicktype-xcode.PasteJSONAsCode</string>
 				<key>Group</key>
 				<string>Editor Menu for Source Code</string>
@@ -107,6 +127,26 @@
 				<string>Paste JSON as</string>
 				<key>Title</key>
 				<string>Paste JSON as Objective-C Implementation</string>
+			</dict>
+			<dict>
+				<key>Action</key>
+				<string>_invokeSourceEditorExtensionCommand:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandID</key>
+				<string>IDESourceEditorExtension:name.lazarenko.daniel.xcsort.xcsortext,IDESourceEditorExtensionCommand:name.lazarenko.daniel.xcsort.xcsortext.SourceEditorCommand</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>xcsort</string>
+				<key>Title</key>
+				<string>Sort Lines</string>
 			</dict>
 			<dict>
 				<key>Action</key>
