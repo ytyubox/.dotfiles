@@ -20,3 +20,7 @@ https://www.idownloadblog.com/2015/01/14/how-to-enable-key-repeats-on-your-mac/
 # new mac setup book
 
 https://sourabhbajaj.com/mac-setup/index.html
+
+## Must have tool 
+
+https://apps.apple.com/tw/app/devcleaner-for-xcode/id1388020431?mt=12
