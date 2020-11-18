@@ -26,3 +26,8 @@ https://sourabhbajaj.com/mac-setup/index.html
 https://apps.apple.com/tw/app/devcleaner-for-xcode/id1388020431?mt=12
 
 https://github.com/powerwolf543/DuplicateFinder
+
+homebrew
+mint
+swiftformat
+periphery
