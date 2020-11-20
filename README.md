@@ -23,6 +23,8 @@ https://sourabhbajaj.com/mac-setup/index.html
 
 ## Must have tool 
 
+https://github.com/archagon/sensible-side-buttons/tree/4c1e946615356dc9cf50b414bfdec852762e7f2d
+
 https://apps.apple.com/tw/app/devcleaner-for-xcode/id1388020431?mt=12
 
 https://github.com/powerwolf543/DuplicateFinder
