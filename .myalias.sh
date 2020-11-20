@@ -63,3 +63,10 @@ gcld() {
   git clone "$1" && cd "$(basename "$1" .git)"
 }
 alias gbds='git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base master $branch) && [[ $(git cherry master $(git commit-tree $(git rev-parse $branch\^{tree}) -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
+
+# xcode
+xcddd(){
+rm -rf ~/Library/Developer/Xcode/DerivedData
+echo "Removed all derived data from xcode."
+}
+
