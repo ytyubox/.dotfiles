@@ -36,3 +36,6 @@ mint
 swiftformat
 
 periphery
+
+## Alfred setting 
+https://www.alfredforum.com/topic/13215-using-git-to-synchronize-alfred-4-preferences-between-computers/
