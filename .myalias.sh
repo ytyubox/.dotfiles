@@ -10,6 +10,7 @@ alias sublime='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias c='pbcopy'
 alias p='pbpaste'
 alias CHANGELOG='sh ~/.dotfiles/aliasSource/log_changes.sh'
+# file
 mc ()
 {
     mkdir -p --  "$1" &&
@@ -18,7 +19,8 @@ mc ()
 alias lt='tree -CN'
 alias ltl='tree -CN -L'
 
-
+bury_copy() { mkdir -p `dirname $2` && cp "$1" "$2"; }
+# git
 gms1() 
 {
 		$ R=$'\n'
