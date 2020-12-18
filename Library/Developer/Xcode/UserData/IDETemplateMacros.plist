@@ -4,12 +4,13 @@
 <dict>
 	<key>FILEHEADER</key>
 	<string>
-// Created by ___FULLUSERNAME___ in ___DATE___
-//
-//
-// Using Swift ___DEFAULTTOOLCHAINSWIFTVERSION___
-//
-// Running on macOS ___RUNNINGMACOSVERSION___
+/* 
+ *		Created by ___FULLUSERNAME___ in ___DATE___
+ *		
+ *		Using Swift ___DEFAULTTOOLCHAINSWIFTVERSION___
+ *		
+ *		Running on macOS ___RUNNINGMACOSVERSION___
+ */
 </string>
 </dict>
 </plist>
