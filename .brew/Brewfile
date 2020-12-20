@@ -1,0 +1,56 @@
+tap "caskroom/fonts"
+tap "github/gh"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "publish/publish"
+tap "vapor/tap"
+# Collection of portable C++ source libraries
+brew "boost", link: false
+# Collection of portable C++ source libraries
+brew "boost@1.60", link: true
+# Decentralized dependency manager for Cocoa
+brew "carthage"
+# Cross-platform make
+brew "cmake"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Convert source code to formatted text with syntax highlighting
+brew "highlight"
+# Add GitHub support to git on the command-line
+brew "hub"
+# Dependency manager that installs and runs Swift command-line tool packages
+brew "mint"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl2"
+# SDL2 graphics drawing primitives and other support functions
+brew "sdl2_gfx"
+# Library for loading images as SDL surfaces and textures
+brew "sdl2_image"
+# Sample multi-channel audio mixer library
+brew "sdl2_mixer"
+# Small sample cross-platform networking library
+brew "sdl2_net"
+# Library for using TrueType fonts in SDL applications
+brew "sdl2_ttf"
+# Plugin and runtime library for using protobuf with Swift
+brew "swift-protobuf"
+# Tool to enforce Swift style and conventions
+brew "swiftlint"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Fish shell like syntax highlighting for zsh
+brew "zsh-syntax-highlighting"
+# Vapor Toolbox (Server-side Swift web framework)
+brew "vapor/tap/vapor"
+# Vapor Toolbox (Server-side Swift web framework)
+brew "vapor/tap/vapor-beta"
+cask "font-sourcecodepro-nerd-font"
+cask "iterm2"
+cask "slack"
