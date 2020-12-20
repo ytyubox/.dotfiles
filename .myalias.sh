@@ -71,4 +71,6 @@ xcddd(){
 rm -rf ~/Library/Developer/Xcode/DerivedData
 echo "Removed all derived data from xcode."
 }
-
+# github
+alias viewpr='gh pr view -w'
+alias viewrepo='gh repo view -w'
