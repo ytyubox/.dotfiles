@@ -1,0 +1,1 @@
+https://blog.kulman.sk/faster-way-to-download-and-install-xcode/
