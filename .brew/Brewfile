@@ -1,4 +1,4 @@
-tap "caskroom/fonts"
+tap "homebrew/cask-fonts"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
