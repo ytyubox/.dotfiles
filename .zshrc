@@ -2,14 +2,19 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/yu/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
-
+ZSH_THEME="powerlevel9k/powerlevel9k"
+# command line 左邊想顯示的內容
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs vi_mode) # <= left prompt 設了 "dir"
+POWERLEVEL9K_MODE='nerdfont-complete'
+# command line 右邊想顯示的內容
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -68,7 +73,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+git
+swiftpm
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,3 +105,20 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias rezsh='source ~/.zshrc'
+prompt_context() {
+if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
+fi
+}
+
+source $HOME/.myalias.sh
+dgit status -s
+dgit fetch
+#source ~/bin/*
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# terminal vim
+bindkey "^[^[[C" forward-word
+bindkey "^[^[[D" backward-word
