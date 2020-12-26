@@ -1,20 +1,22 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
-# command line 左邊想顯示的內容
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs vi_mode) # <= left prompt 設了 "dir"
-POWERLEVEL9K_MODE='nerdfont-complete'
-# command line 右邊想顯示的內容
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time) # <= right prompt 設了 "time"
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -106,11 +108,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias rezsh='source ~/.zshrc'
-prompt_context() {
-if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-fi
-}
 
 source $HOME/.myalias.sh
 dgit status -s
@@ -122,3 +119,6 @@ source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # terminal vim
 bindkey "^[^[[C" forward-word
 bindkey "^[^[[D" backward-word
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
