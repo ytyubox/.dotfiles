@@ -1,26 +1,38 @@
-tap "homebrew/cask-fonts"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "publish/publish"
 tap "vapor/tap"
+# Download with resuming and segmented downloading
+brew "aria2"
+# Automatic configure script builder
+brew "autoconf"
+# Tool for generating GNU Standards-compliant Makefiles
+brew "automake"
 # Collection of portable C++ source libraries
 brew "boost", link: false
-# Collection of portable C++ source libraries
-brew "boost@1.60", link: true
 # Decentralized dependency manager for Cocoa
 brew "carthage"
 # Cross-platform make
 brew "cmake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
 # Convert source code to formatted text with syntax highlighting
 brew "highlight"
 # Add GitHub support to git on the command-line
 brew "hub"
+# YAML Parser
+brew "libyaml"
+# Mac App Store command-line interface
+brew "mas"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
 # Low-level access to audio, keyboard, mouse, joystick, and graphics
@@ -37,21 +49,23 @@ brew "sdl2_net"
 brew "sdl2_ttf"
 # Plugin and runtime library for using protobuf with Swift
 brew "swift-protobuf"
-# Tool to enforce Swift style and conventions
-brew "swiftlint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen"
+# General-purpose lossless data-compression library
+brew "zlib"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Vapor Toolbox (Server-side Swift web framework)
-brew "vapor/tap/vapor"
-# Vapor Toolbox (Server-side Swift web framework)
-brew "vapor/tap/vapor-beta"
-cask "font-sourcecodepro-nerd-font"
+cask "alfred"
 cask "iterm2"
 cask "slack"
-brew "aria2"
+mas "DevCleaner", id: 1388020431
+mas "GIPHY CAPTURE", id: 668208984
+mas "Magnet", id: 441258766
+mas "Paste JSON as Code • quicktype", id: 1330801220
+mas "Telegram", id: 747648890
+mas "Twitter", id: 1482454543
+mas "Vimari", id: 1480933944

@@ -7,6 +7,8 @@ dgit reset --hard
 ```
 Please note that any files that exist in your home directory will be overwritten by the files from your repository if they’re present.
 
+# Safari 
+ cookie : https://www.minwt.com/mac/15289.html
 
 # Source
 https://www.electricmonk.nl/log/2015/06/22/keep-your-home-dir-in-git-with-a-detached-working-directory/
