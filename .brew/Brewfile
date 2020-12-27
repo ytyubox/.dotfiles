@@ -4,6 +4,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "romkatv/powerlevel10k"
 tap "vapor/tap"
 # Download with resuming and segmented downloading
 brew "aria2"
@@ -59,7 +60,10 @@ brew "zlib"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# A Zsh Theme
+brew "romkatv/powerlevel10k/powerlevel10k"
 cask "alfred"
+cask "discord"
 cask "iterm2"
 cask "slack"
 mas "DevCleaner", id: 1388020431
