@@ -39,6 +39,12 @@ syntax on
 
 "---------------Line-------------------"
 
+"----------input method----------------"
+function! ChangeIM()
+    silent !im-select com.apple.keylayout.Dvorak
+endfunction
+
+autocmd! InsertLeave *	call ChangeIM()
 
 "---------------plugin-----------------"
 call plug#begin('~/.vim/plugged')
