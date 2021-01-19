@@ -1,17 +1,25 @@
+tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "esphen/wsta", "https://github.com/esphen/wsta.git"
 tap "github/gh"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "peripheryapp/periphery"
 tap "romkatv/powerlevel10k"
+tap "swiftxcode/swiftxcode"
 tap "vapor/tap"
+tap "worlddowntown/taps"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Incrementally update/translate your Strings files
+brew "bartycrouch"
 # Collection of portable C++ source libraries
 brew "boost", link: false
 # Decentralized dependency manager for Cocoa
@@ -20,22 +28,40 @@ brew "carthage"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# GNU awk utility
+brew "gawk"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
 brew "git"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Convert source code to formatted text with syntax highlighting
 brew "highlight"
 # Add GitHub support to git on the command-line
 brew "hub"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # YAML Parser
 brew "libyaml"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Mac App Store command-line interface
 brew "mas"
 # Dependency manager that installs and runs Swift command-line tool packages
 brew "mint"
+# Platform built on V8 to build network applications
+brew "node"
+# Command-line collection runner for Postman
+brew "newman"
+# Development kit for the Java programming language
+brew "openjdk@11"
+# Safe, concurrent, practical language
+brew "rust"
 # Low-level access to audio, keyboard, mouse, joystick, and graphics
 brew "sdl2"
 # SDL2 graphics drawing primitives and other support functions
@@ -48,12 +74,20 @@ brew "sdl2_mixer"
 brew "sdl2_net"
 # Library for using TrueType fonts in SDL applications
 brew "sdl2_ttf"
+# Framework and command-line tool for interacting with SourceKit
+brew "sourcekitten"
 # Plugin and runtime library for using protobuf with Swift
 brew "swift-protobuf"
+# Tool to enforce Swift style and conventions
+brew "swiftlint"
+# Generate scripting interfaces to C/C++ code
+brew "swig"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Command-line client for WebSockets
+brew "websocat"
 # Generate your Xcode project from a spec file and your folder structure
-brew "xcodegen"
+brew "xcodegen", link: false
 # General-purpose lossless data-compression library
 brew "zlib"
 # UNIX shell (command interpreter)
@@ -62,14 +96,50 @@ brew "zsh"
 brew "zsh-syntax-highlighting"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
-cask "alfred"
+# Build SwiftNIO 1 servers from within Xcode.
+brew "swiftxcode/swiftxcode/swift-xcode-nio1"
+# Vapor Toolbox (Server-side Swift web framework)
+brew "vapor/tap/vapor"
+# Script to sort "children" and "files" sections in Xcode project.pbxproj files
+brew "worlddowntown/taps/sort-pbxproj"
 cask "discord"
+cask "dotnet-sdk"
+cask "font-source-code-pro"
+cask "font-sourcecodepro-nerd-font"
 cask "iterm2"
-cask "slack"
+cask "macdown"
+cask "peripheryapp/periphery/periphery"
+cask "proxyman"
+mas "1Blocker", id: 1107421413
+mas "AlignmentForXcode", id: 1168397789
+mas "Attributed String Creator", id: 1460247510
+mas "Comment Wrapper", id: 1377998565
+mas "Crossy Road Castle", id: 1489275350
+mas "Dear Reader", id: 1475303629
 mas "DevCleaner", id: 1388020431
+mas "Developer", id: 640199958
 mas "GIPHY CAPTURE", id: 668208984
+mas "Grammarly for Safari", id: 1462114288
+mas "Icon Fun", id: 1202847196
+mas "Icons8 Lite", id: 786188363
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
 mas "Magnet", id: 441258766
+mas "Mini Calendar", id: 1088779979
+mas "Mini Motorways", id: 1456188526
+mas "Notability", id: 736189492
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Paste JSON as Code • quicktype", id: 1330801220
+mas "Pastebot", id: 1179623856
+mas "Pinball Wizard", id: 1461998223
+mas "Protocol", id: 1212245111
+mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
+mas "Theu2007Survivalists", id: 1515959873
+mas "Things", id: 904280696
 mas "Twitter", id: 1482454543
 mas "Vimari", id: 1480933944
+mas "WebSocket Client", id: 1399498094
+mas "Xcode", id: 497799835
+mas "xcsort", id: 1153337296

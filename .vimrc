@@ -1,5 +1,13 @@
 "-------------GUI setting--------------"
 set guifont=Menlo\ Regular:h15
+
+" Word Wrap in Vim (preserving indentation) https://stackoverflow.com/a/26578161/10172299
+" Indents word-wrapped lines as much as the 'parent' line
+set breakindent
+" Ensures word-wrap does not split words
+set formatoptions=l
+set lbr
+
 "-------------Search-------------------"
 set hlsearch
 set incsearch
@@ -45,3 +53,4 @@ augroup autosourcing
 	autocmd! 
 	autocmd BufWritePost .vimrc source %
 augroup END
+
