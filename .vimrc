@@ -1,3 +1,6 @@
+"-------------leader mapping-----------"
+let mapleader = "\<Space>"
+xnoremap <leader>a xi{<Esc>po}<Esc>viB>kI<#Block#> <C-o>0
 "-------------GUI setting--------------"
 set guifont=Menlo\ Regular:h15
 
