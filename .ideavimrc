@@ -1,0 +1,17 @@
+let mapleader = "\<Space>"
+"https://unix.stackexchange.com/a/141104
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+
+
+let mapleader = "\<Space>"
+"----------add { } arround of selected lines, end in insert mode-------------"
+xnoremap <leader>ai dO{<CR><Esc>Pk%kddviB>kI <C-o>h
+"----------add { } arround of selected lines, end in normal mode-------------"
+xnoremap <leader>an dO{<CR><Esc>Pk%kddviB>kI <Esc>h
+
+" https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
+set ideajoin
