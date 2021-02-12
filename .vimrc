@@ -1,3 +1,6 @@
+"-------------ENV SETTING-----------"
+:set noswapfile
+
 "-------------leader mapping-----------"
 let mapleader = "\<Space>"
 xnoremap <leader>a xi{<Esc>po}<Esc>viB>kI<#Block#> <C-o>0
@@ -41,6 +44,9 @@ inoremap <Del> <C-o>:echo "No Delete for you!🤔"<CR>
 
 "---------------Line-------------------"
 set number relativenumber
+
+
+"---------------plugin-----------------"
 
 
 "-------------Mappings-----------------"

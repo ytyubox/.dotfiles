@@ -9,7 +9,7 @@ else if userLocale is "ko-Kore_KR" then
     set user_disconnection to "연결 해제"
 end if
 
-set device_name to "Yu’s AirPods"
+set device_name to "游諭的AirPods Pro"
 
 activate application "SystemUIServer"
 tell application "System Events"
