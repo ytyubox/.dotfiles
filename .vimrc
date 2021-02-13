@@ -41,6 +41,10 @@ syntax on
 
 
 "---------------plugin-----------------"
+call plug#begin('~/.vim/plugged')
+Plug 'https://github.com/brglng/vim-im-select.git'
+let g:im_select_default='com.apple.keylayout.Dvorak'
+call plug#end()
 
 
 "-------------Mappings-----------------"
