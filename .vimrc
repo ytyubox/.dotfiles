@@ -44,8 +44,19 @@ syntax on
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/brglng/vim-im-select.git'
 let g:im_select_default='com.apple.keylayout.Dvorak'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 call plug#end()
-
+" https://github.com/junegunn/vim-plug
+" using :PlugInstall to install new Plugin
+" Command	Description
+" PlugInstall [name ...] [#threads]	Install plugins
+" PlugUpdate [name ...] [#threads]	Install or update plugins
+" PlugClean[!]	Remove unlisted plugins (bang version will clean without prompt)
+" PlugUpgrade	Upgrade vim-plug itself
+" PlugStatus	Check the status of plugins
+" PlugDiff	Examine changes from the previous update and the pending changes
+" PlugSnapshot[!] [output path]	Generate script for restoring the current snapshot of the plugins
 
 "-------------Mappings-----------------"
 

@@ -30,3 +30,11 @@ inoremap <Del> <C-o>:echo "No Delete for you!🤔"<CR>
 "leader is space
     let mapleader = "\<Space>"
     xnoremap <leader>a xi{<Esc>po}<Esc>viB>kI<#Block#> <C-o>0
+
+" insert ESC key swap with ctrl c
+ inoremap <ESC> <C-C>
+ inoremap <C-C> <ESC>
+
+ " j -> gj, for lines too long and jump made easy
+nnoremap j gj
+nnoremap k gk

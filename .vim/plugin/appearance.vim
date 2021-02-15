@@ -18,6 +18,8 @@ set guifont=Menlo\ Regular:h15
 " Ensures word-wrap does not split words
     set formatoptions=l
     set lbr
+" full size character
+    set ambiwidth=double
 "GUI
 "show cursor x, y at bottom line
     set ruler
