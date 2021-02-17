@@ -71,6 +71,7 @@ call plug#begin('~/.vim/plugged')
 
     "https://github.com/ctrlpvim/ctrlp.vim
     Plug 'ctrlpvim/ctrlp.vim'
+    " add new ignore dir FT$|FT$
     let g:ctrlp_custom_ignore = {
       \ 'dir':  '\v[\/]\.(git|hg|svn)$|tmp$',
       \ 'file': '\v\.(exe|so|dll)$',
@@ -86,6 +87,18 @@ call plug#begin('~/.vim/plugged')
               let g:ctrlp_use_caching = 0
           endif
 
+
+    "https://github.com/tomtom/tcomment_vim
+    Plug 'https://github.com/tomtom/tcomment_vim'
+
+    "  https://github.com/garbas/vim-snipmate
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'tomtom/tlib_vim'
+    Plug 'garbas/vim-snipmate'
+    Plug 'honza/vim-snippets'
+
+    Plug 'https://github.com/preservim/tagbar'
+    noremap <F3> :TagbarToggle<Enter>
 
 call plug#end()
 " https://github.com/junegunn/vim-plug
