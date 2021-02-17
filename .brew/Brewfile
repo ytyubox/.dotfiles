@@ -7,6 +7,7 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "nshipster/formulae"
 tap "peripheryapp/periphery"
 tap "romkatv/powerlevel10k"
 tap "swiftxcode/swiftxcode"
@@ -60,6 +61,8 @@ brew "node"
 brew "newman"
 # Development kit for the Java programming language
 brew "openjdk@11"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Safe, concurrent, practical language
 brew "rust"
 # Low-level access to audio, keyboard, mouse, joystick, and graphics
@@ -82,10 +85,14 @@ brew "swift-protobuf"
 brew "swiftlint"
 # Generate scripting interfaces to C/C++ code
 brew "swig"
+# Code-search similar to ack
+brew "the_silver_searcher"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Command-line client for WebSockets
 brew "websocat"
+# Internet file retriever
+brew "wget"
 # Generate your Xcode project from a spec file and your folder structure
 brew "xcodegen", link: false
 # General-purpose lossless data-compression library
@@ -94,6 +101,8 @@ brew "zlib"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# "Generate Your Boilerplate"
+brew "nshipster/formulae/gyb"
 # A Zsh Theme
 brew "romkatv/powerlevel10k/powerlevel10k"
 # Build SwiftNIO 1 servers from within Xcode.
@@ -102,44 +111,18 @@ brew "swiftxcode/swiftxcode/swift-xcode-nio1"
 brew "vapor/tap/vapor"
 # Script to sort "children" and "files" sections in Xcode project.pbxproj files
 brew "worlddowntown/taps/sort-pbxproj"
+# Voice and text chat software
 cask "discord"
+# Developer platform
 cask "dotnet-sdk"
 cask "font-source-code-pro"
 cask "font-sourcecodepro-nerd-font"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Open-source Markdown editor
 cask "macdown"
-cask "peripheryapp/periphery/periphery"
+cask "periphery"
+# Modern and intuitive HTTP Debugging Proxy app
 cask "proxyman"
-mas "1Blocker", id: 1107421413
-mas "AlignmentForXcode", id: 1168397789
-mas "Attributed String Creator", id: 1460247510
-mas "Comment Wrapper", id: 1377998565
-mas "Crossy Road Castle", id: 1489275350
-mas "Dear Reader", id: 1475303629
-mas "DevCleaner", id: 1388020431
-mas "Developer", id: 640199958
-mas "GIPHY CAPTURE", id: 668208984
-mas "Grammarly for Safari", id: 1462114288
-mas "Icon Fun", id: 1202847196
-mas "Icons8 Lite", id: 786188363
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Magnet", id: 441258766
-mas "Mini Calendar", id: 1088779979
-mas "Mini Motorways", id: 1456188526
-mas "Notability", id: 736189492
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Paste JSON as Code • quicktype", id: 1330801220
-mas "Pastebot", id: 1179623856
-mas "Pinball Wizard", id: 1461998223
-mas "Protocol", id: 1212245111
-mas "Slack", id: 803453959
-mas "Telegram", id: 747648890
-mas "Theu2007Survivalists", id: 1515959873
-mas "Things", id: 904280696
-mas "Twitter", id: 1482454543
-mas "Vimari", id: 1480933944
-mas "WebSocket Client", id: 1399498094
-mas "Xcode", id: 497799835
-mas "xcsort", id: 1153337296
+# Messaging app with a focus on speed and security
+cask "telegram"

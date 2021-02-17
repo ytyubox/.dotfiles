@@ -1,3 +1,9 @@
+" :map to see all key mapping
+" <D- > stand for apple command key
+
+
+
+
 
 "----------Disable arrow key-----------"
 "replace arrow and Backspace, Delete with echo
@@ -34,6 +40,7 @@ inoremap <Del> <C-c>:echo "No Delete for you!🤔"<CR>a
 " insert ESC key swap with ctrl c
  inoremap <ESC> <C-C>
  inoremap <C-C> <ESC>
+ inoremap <C-R><C-R> <C-R>*
 
  " j -> gj, for lines too long and jump made easy
 nnoremap j gj

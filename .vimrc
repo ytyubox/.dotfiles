@@ -5,7 +5,7 @@ set nocompatible
     set noswapfile
 
 "share clipboard with system
-    set clipboard=unnamed
+    "set clipboard=unnamed
 
 "set indent as 4 space in insert/normal `<<` mode
     set softtabstop=4 shiftwidth=4
@@ -42,10 +42,51 @@ syntax on
 
 "---------------plugin-----------------"
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/brglng/vim-im-select.git'
-let g:im_select_default='com.apple.keylayout.Dvorak'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+
+    " im_select auto change IM on exit insert mode
+    Plug 'https://github.com/brglng/vim-im-select.git'
+    let g:im_select_default='com.apple.keylayout.Dvorak'
+
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
+
+    Plug 'vim-airline/vim-airline'
+    let g:airline#extensions#tabline#enabled = 1
+
+    " https://github.com/preservim/nerdtree
+    Plug 'preservim/nerdtree'
+    nnoremap <silent> <F2> :NERDTreeToggle<CR>
+    let NERDTreeMinimalUI=1
+    " Exit Vim if NERDTree is the only window left.
+    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+    " Start NERDTree and put the cursor back in the other window.
+    autocmd VimEnter * NERDTree | wincmd p
+    let NERDTreeChDirMode = 2
+    " m open NERDTree Menu
+
+    " https://github.com/tpope/vim-surround
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-repeat'
+
+    "https://github.com/ctrlpvim/ctrlp.vim
+    Plug 'ctrlpvim/ctrlp.vim'
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$|tmp$',
+      \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+      \ }
+
+
+    " Faster Grepping in Vim - thoughtbot https://thoughtbot.com/blog/faster-grepping-in-vim
+    " 快速找原始碼的好幫手：The Silver Searcher｜專欄文章｜五倍紅寶石 https://5xruby.tw/posts/technical-article-02/
+    if executable('ag')
+          set grepprg=ag\ --nogroup\ --nocolor
+            let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+              let g:ctrlp_use_caching = 0
+          endif
+
+
 call plug#end()
 " https://github.com/junegunn/vim-plug
 " using :PlugInstall to install new Plugin
@@ -61,7 +102,7 @@ call plug#end()
 "-------------Mappings-----------------"
 
 "make it easy to edit the Vimrc file.
-nmap <leader>ev :tabedit $MYVIMRC<cr>
+nmap <leader>rc :tabedit $MYVIMRC<cr>
 
 "------------Auto-Commands-------------"
 

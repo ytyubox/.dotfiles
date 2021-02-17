@@ -1,5 +1,5 @@
 {
-  "excludedUrls": ["https://leetcode.com", "https://hackmd.io"],
+  "excludedUrls": "https://leetcode.com, https://hackmd.io",
   "linkHintCharacters": "asdjklqwerzxc",
   "detectByCursorStyle": false,
   "scrollSize": 150,
