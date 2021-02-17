@@ -100,6 +100,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'https://github.com/preservim/tagbar'
     noremap <F3> :TagbarToggle<Enter>
 
+
+    Plug 'https://github.com/mileszs/ack.vim'
+    if executable('ag')
+          let g:ackprg = 'ag --vimgrep'
+            noremap FF :Ack<Space>
+        else
+              noremap FF :echo "you need to install ack or ag first"<Enter>
+          endif
+
 call plug#end()
 " https://github.com/junegunn/vim-plug
 " using :PlugInstall to install new Plugin

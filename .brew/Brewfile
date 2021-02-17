@@ -13,6 +13,8 @@ tap "romkatv/powerlevel10k"
 tap "swiftxcode/swiftxcode"
 tap "vapor/tap"
 tap "worlddowntown/taps"
+# Search tool like grep, but optimized for programmers
+brew "ack"
 # Download with resuming and segmented downloading
 brew "aria2"
 # Automatic configure script builder
@@ -121,8 +123,38 @@ cask "font-sourcecodepro-nerd-font"
 cask "iterm2"
 # Open-source Markdown editor
 cask "macdown"
+# Text editor
+cask "macvim"
 cask "periphery"
 # Modern and intuitive HTTP Debugging Proxy app
 cask "proxyman"
 # Messaging app with a focus on speed and security
 cask "telegram"
+mas "1Blocker", id: 1107421413
+mas "AlignmentForXcode", id: 1168397789
+mas "Attributed String Creator", id: 1460247510
+mas "Comment Wrapper", id: 1377998565
+mas "DevCleaner", id: 1388020431
+mas "Developer", id: 640199958
+mas "GIPHY CAPTURE", id: 668208984
+mas "Grammarly for Safari", id: 1462114288
+mas "Icon Fun", id: 1202847196
+mas "Icons8 Lite", id: 786188363
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Magnet", id: 441258766
+mas "Mini Calendar", id: 1088779979
+mas "Notability", id: 736189492
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Paste JSON as Code • quicktype", id: 1330801220
+mas "Pastebot", id: 1179623856
+mas "Pinball Wizard", id: 1461998223
+mas "Protocol", id: 1212245111
+mas "Slack", id: 803453959
+mas "Things", id: 904280696
+mas "Twitter", id: 1482454543
+mas "Vimari", id: 1480933944
+mas "WebSocket Client", id: 1399498094
+mas "Xcode", id: 497799835
+mas "xcsort", id: 1153337296
