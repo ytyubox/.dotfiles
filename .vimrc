@@ -63,6 +63,7 @@ call plug#begin('~/.vim/plugged')
     " Start NERDTree and put the cursor back in the other window.
     autocmd VimEnter * NERDTree | wincmd p
     let NERDTreeChDirMode = 2
+    let NERDTreeShowHidden = 1
     " m open NERDTree Menu
 
     " https://github.com/tpope/vim-surround
@@ -108,6 +109,13 @@ call plug#begin('~/.vim/plugged')
         else
               noremap FF :echo "you need to install ack or ag first"<Enter>
           endif
+    Plug 'prabirshrestha/vim-lsp'
+    " With this added in .vimrc, you can use <c-x><c-o> in insert mode to trigger sourcekit-lsp completion.
+    " https://github.com/apple/sourcekit-lsp/tree/main/Editors#vim-lsp
+    autocmd FileType swift setlocal omnifunc=lsp#complete
+    Plug 'https://github.com/keith/swift.vim'
+    Plug 'https://github.com/vim-syntastic/syntastic'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 " https://github.com/junegunn/vim-plug
@@ -134,6 +142,9 @@ nmap <leader>rc :tabedit $MYVIMRC<cr>
 
 " 存檔時自動把行末多餘的空白刪除
     autocmd BufWritePre * :%s/\s\+$//e
+
+" Opening Vim help in a vertical split window https://stackoverflow.com/a/21843502/10172299
+    autocmd FileType help wincmd L
 
 " 按下 F5 執行程式
     if executable("ruby")
