@@ -21,7 +21,7 @@ alias ltl='tree -CN -L'
 
 bury_copy() { mkdir -p `dirname $2` && cp "$1" "$2"; }
 # git
-gms1() 
+gms1()
 {
 		$ R=$'\n'
 		git merge --squash "$1" &&
@@ -34,7 +34,7 @@ alias gls='git ls-files'
 
 alias grweb="open $(git config remote.origin.url)"
 alias g1='clear; git log --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%cr%Creset%<(20,mtrunc)%C(yellow)%d%Creset %C(cyan)%an%Creset %<(50,trunc)%s"'
-alias g2='clear; git log --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%cr%Creset%<(40,mtrunc)%C(yellow)%d%Creset %C(cyan)%an%Creset %<(50,trunc)%s" --all --graph' 
+alias g2='clear; git log --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%cr%Creset%<(40,mtrunc)%C(yellow)%d%Creset %C(cyan)%an%Creset %<(50,trunc)%s" --all --graph'
 alias s='clear;git status -s'
 alias g3='git log --graph --pretty=format:"%Cred%h%Creset %<(12,trunc)%Cgreen%H %an %ae %ai%cr%Creset%<(20,mtrunc)%C(yellow)%d%Creset %C(cyan)%an%Creset %<(50,trunc)%n%n%C(blue)%s%Creset%n%n%w(,16,16)%b"'
 alias g4='git log --graph --pretty="%n %C(bold blue)[state] %C(bold yellow)%D%Creset%n %C(bold blue)[info.] %Cred%h%Creset | %C(cyan)%an%Creset | %Cgreen%cr%Creset%n %C(bold blue)[title] %C(bold white)%s%Creset%n %C(bold blue)%n %w(,10,11)%b"'
@@ -75,3 +75,7 @@ echo "Removed all derived data from xcode."
 alias viewpr='gh pr view -w'
 alias viewrepo='gh repo view -w'
 alias appcode='open -a  Appcode $1'
+
+
+#neovim
+alias nv='nvim'

@@ -116,11 +116,22 @@ call plug#begin('~/.vim/plugged')
               noremap FF :echo "you need to install ack or ag first"<Enter>
           endif
     Plug 'prabirshrestha/vim-lsp'
+
     " With this added in .vimrc, you can use <c-x><c-o> in insert mode to trigger sourcekit-lsp completion.
     " https://github.com/apple/sourcekit-lsp/tree/main/Editors#vim-lsp
     autocmd FileType swift setlocal omnifunc=lsp#complete
+    augroup filetype
+        au! BufRead,BufNewFile *.swift set ft=swift
+    augroup END
     Plug 'https://github.com/keith/swift.vim'
     Plug 'https://github.com/vim-syntastic/syntastic'
+    if executable('sourcekit-lsp')
+            au User lsp_setup call lsp#register_server({
+                    \ 'name': 'sourcekit-lsp',
+                    \ 'cmd': {server_info->['sourcekit-lsp']},
+                    \ 'whitelist': ['swift'],
+                    \ })
+        endif
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
