@@ -89,10 +89,10 @@ call plug#begin('~/.vim/plugged')
     " Faster Grepping in Vim - thoughtbot https://thoughtbot.com/blog/faster-grepping-in-vim
     " 快速找原始碼的好幫手：The Silver Searcher｜專欄文章｜五倍紅寶石 https://5xruby.tw/posts/technical-article-02/
     if executable('ag')
-          set grepprg=ag\ --nogroup\ --nocolor
-            let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-              let g:ctrlp_use_caching = 0
-          endif
+        set grepprg=ag\ --nogroup\ --nocolor
+        let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+        let g:ctrlp_use_caching = 0
+    endif
 
 
     "https://github.com/tomtom/tcomment_vim
@@ -110,11 +110,11 @@ call plug#begin('~/.vim/plugged')
 
     Plug 'https://github.com/mileszs/ack.vim'
     if executable('ag')
-          let g:ackprg = 'ag --vimgrep'
-            noremap FF :Ack<Space>
-        else
-              noremap FF :echo "you need to install ack or ag first"<Enter>
-          endif
+        let g:ackprg = 'ag --vimgrep'
+        noremap FF :Ack<Space>
+    else
+        noremap FF :echo "you need to install ack or ag first"<Enter>
+    endif
     Plug 'prabirshrestha/vim-lsp'
 
     " With this added in .vimrc, you can use <c-x><c-o> in insert mode to trigger sourcekit-lsp completion.
@@ -133,6 +133,8 @@ call plug#begin('~/.vim/plugged')
                     \ })
         endif
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Nvim Lsp
+    Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
 " https://github.com/junegunn/vim-plug
