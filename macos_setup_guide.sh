@@ -3,7 +3,7 @@ echo "Starting bootstrapping"
 
 # Check for Homebrew, install if we don't have it
 
-# Remove workspace auto-switching 
+# Remove workspace auto-switching
 defaults write com.apple.dock workspaces-auto-swoosh -bool NO
 killall Dock
 
@@ -16,10 +16,12 @@ defaults write com.apple.screencapture location ~/screenshots/ && killall System
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 xcode-select --install
-$(curl -fsSL 
+$(curl -fsSL
 
 echo "install end"
 
 if test ! $(which brew); then
     echo "Install homebrew... https://brew.sh"
 fi
+
+Echo "Install oh my zsh from https://github.com/ohmyzsh/ohmyzsh"

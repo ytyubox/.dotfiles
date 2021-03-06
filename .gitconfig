@@ -7,7 +7,7 @@
 	process = git-lfs filter-process
 	required = true
 [commit]
-	template = /Users/youzongyu/.git-commit-template.txt
+	template = $HOME/.git-commit-template.txt
 [credential]
     helper = osxkeychain
 [alias]
@@ -25,5 +25,3 @@
 [push]
 	default = current
 	followTags = true
-[init]
-	templateDir = /Users/ios.yu/.config/git/template
