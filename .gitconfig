@@ -6,8 +6,6 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[commit]
-	template = $HOME/.git-commit-template.txt
 [credential]
     helper = osxkeychain
 [alias]
@@ -15,11 +13,9 @@
 	cho = checkout
 	br = branch
 [core]
-	excludesfile = /Users/youzongyu/.gitignore_global
+	excludesfile = $HOME/.gitignore_global
 	ignoreCase = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	trustExitCode = true
+	editor = $(which vim)
 [pull]
 	rebase = true
 [push]
