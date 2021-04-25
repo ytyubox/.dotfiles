@@ -21,3 +21,5 @@
 [push]
 	default = current
 	followTags = true
+[init]
+	defaultBranch = main

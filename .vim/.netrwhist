@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/Users/tsungyu/code/ShuangPin/typingclubMeta/Tests/typingclubMetaTests/Resources/metas'
 let g:netrw_dirhist_1='/Users/ios.yu/.vim'
 let g:netrw_dirhist_0='/Users/ios.yu/Desktop/tryC/tryC'
 let g:netrw_dirhist_9='/Users/ios.yu/Desktop/tryC'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_6='/Users/ios.yu/Desktop/TestUtils'
 let g:netrw_dirhist_5='/Users/ios.yu/Desktop/ios-lead-essentials-ui-design-patterns-challenge/MVVM Module'
 let g:netrw_dirhist_4='/Users/ios.yu/Desktop/ios-lead-essentials-ui-design-patterns-challenge/MVC Module/Tests/Feed UI'
 let g:netrw_dirhist_3='/Users/ios.yu/Desktop/ios-lead-essentials-ui-design-patterns-challenge/MVC Module/Tests'
-let g:netrw_dirhist_2='/Users/ios.yu/Desktop/ios-lead-essentials-ui-design-patterns-challenge/MVVM Module'
