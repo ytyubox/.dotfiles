@@ -40,90 +40,90 @@ syntax on
 "---------------Line-------------------"
 
 "----------input method----------------"
-function! ChangeIM()
-    silent !im-select com.apple.keylayout.Dvorak
-endfunction
-
-autocmd! InsertLeave *	call ChangeIM()
+" function! ChangeIM()
+"     silent !im-select com.apple.keylayout.Dvorak
+" endfunction
+"
+" autocmd! InsertLeave *	call ChangeIM()
 
 "---------------plugin-----------------"
-call plug#begin('~/.vim/plugged')
+" call plug#begin('~/.vim/plugged')
+"
+"     " im_select auto change IM on exit insert mode
+"     Plug 'https://github.com/brglng/vim-im-select.git'
+"     let g:im_select_default='com.apple.keylayout.Dvorak'
 
-    " im_select auto change IM on exit insert mode
-    Plug 'https://github.com/brglng/vim-im-select.git'
-    let g:im_select_default='com.apple.keylayout.Dvorak'
-
-    Plug 'godlygeek/tabular'
-    Plug 'plasticboy/vim-markdown'
-
-    Plug 'vim-airline/vim-airline'
-    let g:airline#extensions#tabline#enabled = 1
+"     Plug 'godlygeek/tabular'
+"     Plug 'plasticboy/vim-markdown'
+"
+"     Plug 'vim-airline/vim-airline'
+"     let g:airline#extensions#tabline#enabled = 1
 
     " https://github.com/preservim/nerdtree
-    Plug 'preservim/nerdtree'
-    nnoremap <silent> <F2> :NERDTreeToggle<CR>
-    let NERDTreeMinimalUI=1
-    " Exit Vim if NERDTree is the only window left.
-    autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
-    \ quit | endif
-    " Start NERDTree and put the cursor back in the other window.
-    autocmd VimEnter * NERDTree | wincmd p
-    let NERDTreeChDirMode = 2
-    let NERDTreeShowHidden = 1
+"     Plug 'preservim/nerdtree'
+"     nnoremap <silent> <F2> :NERDTreeToggle<CR>
+"     let NERDTreeMinimalUI=1
+"     " Exit Vim if NERDTree is the only window left.
+"     autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+"     \ quit | endif
+"     " Start NERDTree and put the cursor back in the other window.
+"     autocmd VimEnter * NERDTree | wincmd p
+"     let NERDTreeChDirMode = 2
+"     let NERDTreeShowHidden = 1
     " m open NERDTree Menu
 
     " https://github.com/tpope/vim-surround
-    Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-repeat'
-
-    "https://github.com/ctrlpvim/ctrlp.vim
-    Plug 'ctrlpvim/ctrlp.vim'
-    " add new ignore dir FT$|FT$
-    let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$|tmp$',
-      \ 'file': '\v\.(exe|so|dll)$',
-      \ 'link': 'some_bad_symbolic_links',
-      \ }
-
-
-    " Faster Grepping in Vim - thoughtbot https://thoughtbot.com/blog/faster-grepping-in-vim
-    " 快速找原始碼的好幫手：The Silver Searcher｜專欄文章｜五倍紅寶石 https://5xruby.tw/posts/technical-article-02/
-    if executable('ag')
-          set grepprg=ag\ --nogroup\ --nocolor
-            let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-              let g:ctrlp_use_caching = 0
-          endif
-
-
-    "https://github.com/tomtom/tcomment_vim
-    Plug 'https://github.com/tomtom/tcomment_vim'
-
-    "  https://github.com/garbas/vim-snipmate
-    Plug 'MarcWeber/vim-addon-mw-utils'
-    Plug 'tomtom/tlib_vim'
-    Plug 'garbas/vim-snipmate'
-    Plug 'honza/vim-snippets'
-
-    Plug 'https://github.com/preservim/tagbar'
-    noremap <F3> :TagbarToggle<Enter>
-
-
-    Plug 'https://github.com/mileszs/ack.vim'
-    if executable('ag')
-          let g:ackprg = 'ag --vimgrep'
-            noremap FF :Ack<Space>
-        else
-              noremap FF :echo "you need to install ack or ag first"<Enter>
-          endif
-    Plug 'prabirshrestha/vim-lsp'
-    " With this added in .vimrc, you can use <c-x><c-o> in insert mode to trigger sourcekit-lsp completion.
-    " https://github.com/apple/sourcekit-lsp/tree/main/Editors#vim-lsp
-    autocmd FileType swift setlocal omnifunc=lsp#complete
-    Plug 'https://github.com/keith/swift.vim'
-    Plug 'https://github.com/vim-syntastic/syntastic'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-call plug#end()
+"     Plug 'tpope/vim-surround'
+"     Plug 'tpope/vim-repeat'
+"
+"     "https://github.com/ctrlpvim/ctrlp.vim
+"     Plug 'ctrlpvim/ctrlp.vim'
+"     " add new ignore dir FT$|FT$
+"     let g:ctrlp_custom_ignore = {
+"       \ 'dir':  '\v[\/]\.(git|hg|svn)$|tmp$',
+"       \ 'file': '\v\.(exe|so|dll)$',
+"       \ 'link': 'some_bad_symbolic_links',
+"       \ }
+"
+"
+"     " Faster Grepping in Vim - thoughtbot https://thoughtbot.com/blog/faster-grepping-in-vim
+"    " 快速找原始碼的好幫手：The Silver Searcher｜專欄文章｜五倍紅寶石 https://5xruby.tw/posts/technical-article-02/
+"    if executable('ag')
+"          set grepprg=ag\ --nogroup\ --nocolor
+"            let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+"              let g:ctrlp_use_caching = 0
+"          endif
+"
+"
+"    "https://github.com/tomtom/tcomment_vim
+"    Plug 'https://github.com/tomtom/tcomment_vim'
+"
+"    "  https://github.com/garbas/vim-snipmate
+"    Plug 'MarcWeber/vim-addon-mw-utils'
+"    Plug 'tomtom/tlib_vim'
+"    Plug 'garbas/vim-snipmate'
+"    Plug 'honza/vim-snippets'
+"
+"    Plug 'https://github.com/preservim/tagbar'
+"    noremap <F3> :TagbarToggle<Enter>
+"
+"
+"    Plug 'https://github.com/mileszs/ack.vim'
+"    if executable('ag')
+"          let g:ackprg = 'ag --vimgrep'
+"            noremap FF :Ack<Space>
+"        else
+"              noremap FF :echo "you need to install ack or ag first"<Enter>
+"          endif
+"    Plug 'prabirshrestha/vim-lsp'
+"    " With this added in .vimrc, you can use <c-x><c-o> in insert mode to trigger sourcekit-lsp completion.
+"    " https://github.com/apple/sourcekit-lsp/tree/main/Editors#vim-lsp
+"    autocmd FileType swift setlocal omnifunc=lsp#complete
+"    Plug 'https://github.com/keith/swift.vim'
+"    Plug 'https://github.com/vim-syntastic/syntastic'
+"    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"
+"call plug#end()
 " https://github.com/junegunn/vim-plug
 " using :PlugInstall to install new Plugin
 " Command	Description
@@ -137,8 +137,9 @@ call plug#end()
 
 "-------------Mappings-----------------"
 
+let mapleader=","
 "make it easy to edit the Vimrc file.
-nmap <leader>rc :tabedit $MYVIMRC<cr>
+nmap <leader>rc :tabedit $MYVIMRC<cr>G
 
 "------------Auto-Commands-------------"
 
@@ -163,6 +164,14 @@ nmap <leader>rc :tabedit $MYVIMRC<cr>
     else
         autocmd BufRead,BufNewFile *.rb noremap <F5> :echo "you need to install Node.js first!"
     endif
+
+iabbrev ssig ytyubox@gmail.com
+nnoremap H 0
+nnoremap L $
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <C-c> <nop>
+
 
 "Automatically source the vimrc file on safe.
 augroup autosourcing

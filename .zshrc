@@ -11,7 +11,6 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-themeurce
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -76,6 +75,8 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-themeurce
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+zsh-autosuggestions
+zsh-syntax-highlighting
 git
 swiftpm
 )
@@ -113,8 +114,6 @@ source $HOME/.myalias.sh
 dgit status -s
 dgit fetch
 #source ~/bin/*
-source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # terminal vim
 bindkey "^[^[[C" forward-word
