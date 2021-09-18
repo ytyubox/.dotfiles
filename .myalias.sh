@@ -79,3 +79,6 @@ alias appcode='open -a  Appcode $1'
 
 #neovim
 alias nv='nvim'
+
+#swift
+alias swiftx='swift test 2>&1 | xcbeautify'
