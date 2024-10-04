@@ -1,17 +1,89 @@
-let mapleader = "\<Space>"
-"https://unix.stackexchange.com/a/141104
-set foldmethod=indent
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
 
+:mapclear
+nmap zso :source /Users/tsungyu/.ideavimrc <CR>
+:set rnu
+:set clipboard+=unnamed
+:set exchange
+:set incsearch
+:set matchit
+:set surround
+:set visualbell
 
+:imap jk <Esc>
+:nmap ,m :action FileStructurePopup<CR>
+:nmap <A-l> :set rnu!<CR>
+:nmap <BS> a<BS>
+:nmap <BS> a<BS>
+:nmap z" vi"
+:nmap z' vi'
+:nmap z) vi)
+:nmap z, vi)
+:nmap z. vi}
+:nmap z> vit
+:nmap zaa ca"
+:nmap zb ciw
+:nmap zcc ci"
+:nmap zxx ci]
+:nmap z} vi}
+:vmap \s :action SurroundWith<CR>
+:vmap zb <Esc>ciw
 
-let mapleader = "\<Space>"
-"----------add { } arround of selected lines, end in insert mode-------------"
-xnoremap <leader>ai dO{<CR><Esc>Pk%kddviB>kI <C-o>h
-"----------add { } arround of selected lines, end in normal mode-------------"
-xnoremap <leader>an dO{<CR><Esc>Pk%kddviB>kI <Esc>h
+imap <A-.> self.
+imap <A-;> <Esc>:action IntroduceVariable<CR>
+imap <A-D> <Esc>:action EditorDeleteLine<CR>
+imap <A-P> <Esc>"0Pa
+imap <A-p> <Esc>"0pa
 
-" https://github.com/JetBrains/ideavim/wiki/%60ideajoin%60-examples
-set ideajoin
+imap zf <Esc>:action GotoDeclaration<CR>
+imap zj <Esc><action>(Forward)<CR>
+imap zk <Esc><action>(Back)<CR>
+imap zn <Esc>:action GotoNextError<CR>
+imap zra <Esc>zz:action ReformatCode<CR><Action>(Run)
+imap zrf <Esc>:action IntroduceField<CR>
+imap zri <Esc>:action Inline<CR>
+imap zro <Esc>:action Move<CR><action>(JumpToLastChange)<CR><action>(JumpToLastChange)<CR>
+imap zrp <Esc>:action IntroduceParameter<CR>
+imap zrt <Esc>:action SearchEverywhere<CR>
+imap zrv <Esc>:action IntroduceVariable<CR>
+map <A-D> :action EditorDeleteLine<CR>
+map <C-A-J> :action MoveLineDown<CR>:action VimAutoIndentLines<CR>
+map <C-A-K> :action MoveLineUp<CR>:action VimAutoIndentLines<CR>
+map <C-D> :action EditorDuplicateLines<CR>
+map zra <Esc>zz:action ReformatCode<CR><Action>(Run)
+map zrf :action IntroduceField<CR>
+map zri :action Inline<CR>
+map zrp :action IntroduceParameter<CR>
+map zrr :action RenameElement<CR>
+map zrt :action SearchEverywhere<CR>
+map zrv :action IntroduceVariable<CR>
+nmap zss <Action>(SurroundWithLiveTemplate)
+imap zss <Action>(SurroundWithLiveTemplate)
+nmap ,c :action NewElementSamePlace<CR>
+nmap ,g <Action>(Generate)
+nmap <A-.> iself.<ESC>
+nmap <A-;> :action IntroduceVariable<CR>
+nmap <A-P> "0P
+nmap <A-p> "0p
+nmap <C-\> :action AceTargetAction<CR>
+nmap <space> :action AceAction<CR>
+nmap \\s :action ChangeSignature<CR>
+nmap zf <Action>(GotoDeclaration)
+nmap zgc zz:action CheckinProject<CR>
+nmap zj <action>(Forward)<CR>
+nmap zk <action>(Back)<CR>
+nmap zn :action GotoNextError<CR>
+"Move file
+nmap zro :action Move<CR><action>(JumpToLastChange)<CR><action>(JumpToLastChange)<CR>
+nmap zsp va":action IntroduceParameter<CR>
+
+"copy the test case above the cursor and read to edit the testcase name
+nmap <F1> o<Esc>y?func test<CR>PV=9l
+imap <F1> <CR><Esc>y?func test<CR>PV=9lce
+"move current live to a new setup function
+nmap zsu dd?class<CR>ooverride func setUp() {}<Left><CR><Esc>pkdd<Action>(ReformatCode)
+" Swift version of extract function
+vmap M :action SwiftExtractFunction<CR>
+imap zrm <ESC>:action SwiftExtractFunction<CR>
+nmap zrm :action SwiftExtractMethod<CR>
+"show Refactor this pop up
+nmap zcs <Action>(Refactorings.QuickListPopupAction)

@@ -417,6 +417,8 @@
 				<string>buildForTestActiveRunContext:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.BuildForTest</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.BuildForTest</string>
 				<key>Group</key>
@@ -437,6 +439,8 @@
 				<string>cleanActiveRunContext:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.Clean</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.Clean</string>
 				<key>Group</key>
@@ -448,13 +452,15 @@
 				<key>Navigation</key>
 				<string>NO</string>
 				<key>Title</key>
-				<string>Clean</string>
+				<string>Clean Build Folder…</string>
 			</dict>
 			<dict>
 				<key>Action</key>
 				<string>closeDocument:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.CloseDocument</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.CloseDocument</string>
 				<key>Group</key>
@@ -470,9 +476,33 @@
 			</dict>
 			<dict>
 				<key>Action</key>
+				<string>_closeActiveEditor:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.CloseEditor</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEKit.CmdDefinition.CloseEditor</string>
+				<key>Group</key>
+				<string>File Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string></string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Title</key>
+				<string>Close Editor</string>
+			</dict>
+			<dict>
+				<key>Action</key>
 				<string>closeOtherEditors:</string>
 				<key>Alternate</key>
 				<string>YES</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.CloseOtherEditors</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.CloseOtherEditors</string>
 				<key>Group</key>
@@ -482,7 +512,7 @@
 				<key>GroupedAlternate</key>
 				<string>NO</string>
 				<key>Keyboard Shortcut</key>
-				<string>^$@W</string>
+				<string></string>
 				<key>Navigation</key>
 				<string>NO</string>
 				<key>Title</key>
@@ -493,6 +523,8 @@
 				<string>performCloseWorkspace:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.CloseWorkspace</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.CloseWorkspace</string>
 				<key>Group</key>
@@ -511,6 +543,8 @@
 				<string>editAndTestActiveRunContext:</string>
 				<key>Alternate</key>
 				<string>YES</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.EditAndTest</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.EditAndTest</string>
 				<key>Group</key>
@@ -531,6 +565,8 @@
 				<string>findPrevious:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.FindPrevious</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.FindPrevious</string>
 				<key>Group</key>
@@ -549,6 +585,8 @@
 				<string>jumpBetweenSourceFileAndGeneratedFile:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.JumpBetweenSourceFileAndGeneratedFile</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.JumpBetweenSourceFileAndGeneratedFile</string>
 				<key>Group</key>
@@ -569,6 +607,8 @@
 				<string>moveKeyboardFocusToNextEditor:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.MoveFocusToNextEditor</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.MoveFocusToNextEditor</string>
 				<key>Group</key>
@@ -589,6 +629,8 @@
 				<string>moveKeyboardFocusToPreviousEditor:</string>
 				<key>Alternate</key>
 				<string>YES</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.MoveFocusToPreviousEditor</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.MoveFocusToPreviousEditor</string>
 				<key>Group</key>
@@ -606,9 +648,35 @@
 			</dict>
 			<dict>
 				<key>Action</key>
+				<string>newFolder:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>IDENewGrouping</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEKit.CmdDefinition.NewFolder</string>
+				<key>Group</key>
+				<string>File Menu</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEKit.MenuDefinition.Main</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>~@n</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Parent Title</key>
+				<string>New</string>
+				<key>Title</key>
+				<string>Folder</string>
+			</dict>
+			<dict>
+				<key>Action</key>
 				<string>newWindow:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.NewWindow</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.NewWindow</string>
 				<key>Group</key>
@@ -629,6 +697,8 @@
 				<string>showGuessPanel:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.ShowSpellingAndGrammar</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.ShowSpellingAndGrammar</string>
 				<key>Group</key>
@@ -649,6 +719,8 @@
 				<string>testActiveRunContext:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.Test</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.Test</string>
 				<key>Group</key>
@@ -669,6 +741,8 @@
 				<string>testAgain:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEKit.CmdDefinition.TestAgain</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEKit.CmdDefinition.TestAgain</string>
 				<key>Group</key>
@@ -688,15 +762,39 @@
 			</dict>
 			<dict>
 				<key>Action</key>
+				<string>toggleCodeCoverageShown:</string>
+				<key>Alternate</key>
+				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowCodeCoverage</string>
+				<key>CommandID</key>
+				<string>Xcode.IDEPegasusSourceEditor.CmdDefinition.ShowCodeCoverage</string>
+				<key>Group</key>
+				<string>Editor Menu for Source Code</string>
+				<key>GroupID</key>
+				<string>Xcode.IDEPegasusSourceEditor.MenuDefinition.Editor</string>
+				<key>GroupedAlternate</key>
+				<string>NO</string>
+				<key>Keyboard Shortcut</key>
+				<string>@</string>
+				<key>Navigation</key>
+				<string>NO</string>
+				<key>Title</key>
+				<string>Code Coverage</string>
+			</dict>
+			<dict>
+				<key>Action</key>
 				<string>execute:</string>
 				<key>Alternate</key>
 				<string>NO</string>
+				<key>CommandGroupID</key>
+				<string>Xcode.IDEPlaygroundEditor.CmdDefinition.RunPlayground</string>
 				<key>CommandID</key>
 				<string>Xcode.IDEPlaygroundEditor.CmdDefinition.RunPlayground</string>
 				<key>Group</key>
 				<string>Editor Menu for Playground</string>
 				<key>GroupID</key>
-				<string>Xcode.IDEPegasusPlaygroundEditor.MenuDefinition.Editor</string>
+				<string>Xcode.IDEPlaygroundEditor.MenuDefinition.Editor</string>
 				<key>GroupedAlternate</key>
 				<string>NO</string>
 				<key>Navigation</key>
@@ -705,6 +803,18 @@
 				<string>Run Playground</string>
 			</dict>
 		</array>
+		<key>Version</key>
+		<integer>3</integer>
+	</dict>
+	<key>Text Key Bindings</key>
+	<dict>
+		<key>Key Bindings</key>
+		<dict>
+			<key></key>
+			<array>
+				<string>cancelOperation:</string>
+			</array>
+		</dict>
 		<key>Version</key>
 		<integer>3</integer>
 	</dict>

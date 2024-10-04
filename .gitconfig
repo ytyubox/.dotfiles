@@ -23,3 +23,7 @@
 	followTags = true
 [init]
 	defaultBranch = main
+[maintenance]
+	repo = /Users/tsungyu/code/LeetCodeCollection
+[apply]
+	whitespace = fix
