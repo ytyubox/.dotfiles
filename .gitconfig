@@ -12,6 +12,10 @@
 	cv = commit -v
 	cho = checkout
 	br = branch
+	st = status
+	co = checkout
+	ci = commit
+	lg = log --oneline --graph --decorate
 [core]
 	excludesfile = $HOME/.gitignore_global
 	ignoreCase = true

@@ -3,7 +3,7 @@ export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.mint/bin"
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
+# confirmations, etc.) dmust go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -124,6 +124,55 @@ bindkey "^[^[[D" backward-word
 
 
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+
+export PATH="/opt/homebrew/opt/icu4c@76/bin:$PATH"
+export PATH="/opt/homebrew/opt/icu4c@76/sbin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/icu4c@76/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/icu4c@76/include"
+
+
+export PKG_CONFIG_PATH="/opt/homebrew/opt/icu4c@76/lib/pkgconfig"
+
+# Set Oh My Zsh theme conditionally
+if [[ "$TERM_PROGRAM" == "vscode" ]]; then
+  ZSH_THEME=""  # Disable Powerlevel10k for Cursor
+else
+  ZSH_THEME="powerlevel10k/powerlevel10k"
+fi
+
+
+
+# Use a minimal prompt in Cursor to avoid command detection issues
+
+# Load Oh My Zsh
+  source $ZSH/oh-my-zsh.sh
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+  
+  [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/tsungyu/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/tsungyu/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/tsungyu/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/tsungyu/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# Xan completions
+function __xan {
+    xan compgen "$1" "$2" "$3"
+}
+complete -F __xan -o default xan
+
+source "$HOME/.config/zsh/claude-wrapper.zsh"
