@@ -175,4 +175,4 @@ function __xan {
 }
 complete -F __xan -o default xan
 
-source "$HOME/.config/zsh/claude-wrapper.zsh"
+[[ -f ~/.config/zsh/claude-wrapper.zsh ]] && source ~/.config/zsh/claude-wrapper.zsh
