@@ -136,9 +136,8 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/icu4c@76/lib/pkgconfig"
 
 # Set Oh My Zsh theme conditionally
 if [[ "$TERM_PROGRAM" == "vscode" ]]; then
-  ZSH_THEME=""  # Disable Powerlevel10k for Cursor
 else
-  ZSH_THEME="powerlevel10k/powerlevel10k"
+  source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
 
